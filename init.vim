@@ -1,7 +1,6 @@
 " ──────────────────────────────────────── Basic Settings ─────────────────────────────────────────
 
 syntax on
-
 set ts=2                   " Number of spaces in <Tab>
 set shiftwidth=2           " Number of spaces to use for each step of (auto)indent
 set softtabstop=2          " Number of spaces a <Tab> counts for
@@ -24,7 +23,6 @@ set cmdheight=1            " Command line height
 set foldenable             " Enables folding of code regions
 set foldmethod=manual      " Sets the fold method to manual, which means folds are created manually
 set signcolumn=yes         " Sign column on the numbers
-
 filetype plugin indent on
 filetype plugin on
 
@@ -90,25 +88,25 @@ call plug#begin()
   "Plug 'airblade/vim-rooter'
 call plug#end()
 
-" -------------------------------------------
-"                   Nerdtree 
-" -------------------------------------------
+" -------------------------------------------------------------------------------------------------
+"   Nerdtree 
+" -------------------------------------------------------------------------------------------------
 
 let g:NERDTreeWinSize=35
 let g:NERDTreeFileExtensionHighlightFullName = 1
 let g:NERDTreeExactMatchHighlightFullName = 1
 let g:NERDTreePatternMatchHighlightFullName = 1
 
-" -------------------------------------------
-"                  Spaceline
-" -------------------------------------------
+" -------------------------------------------------------------------------------------------------
+"   Spaceline 
+" -------------------------------------------------------------------------------------------------
 
 let g:spaceline_seperate_style = 'arrow'
 let g:spaceline_colorscheme = 'one'
 
-" -------------------------------------------
-"                     Ale
-" -------------------------------------------
+" -------------------------------------------------------------------------------------------------
+"   Ale 
+" -------------------------------------------------------------------------------------------------
 
 highlight link ALEVirtualTextError ErrorMsg
 highlight link ALEVirtualTextWarning WarningMsg
@@ -156,9 +154,9 @@ let g:ale_warn_about_trailing_blank_lines = 1
 let g:ale_warn_about_trailing_whitespace = 1
 let g:ale_sign_highlight_linenrs = 1
 
-" -------------------------------------------
-"                 VIM Rooter
-" -------------------------------------------
+" -------------------------------------------------------------------------------------------------
+"   VIM Rooter 
+" -------------------------------------------------------------------------------------------------
 
 "let g:rooter_patterns = ['.git/', 'package.json', 'node_modules/']
 
@@ -176,9 +174,9 @@ let g:ale_sign_highlight_linenrs = 1
 "     endif
 " endfunction
 
-" -------------------------------------------
-"                  Neoformat
-" -------------------------------------------
+" -------------------------------------------------------------------------------------------------
+"   Neoformat
+" -------------------------------------------------------------------------------------------------
 
 let g:neoformat_run_all_formatters = 1
 let g:neoformat_enabled_javascript = ['prettier']
@@ -190,16 +188,16 @@ let g:neoformat_try_node_exe = 1
 " for Debugging
 " let g:neoformat_verbose = 1
 
-" -------------------------------------------
-"                    Tagbar
-" -------------------------------------------
+" -------------------------------------------------------------------------------------------------
+"   Tagbar
+" -------------------------------------------------------------------------------------------------
 
 let g:tagbar_sort = 0
 let g:tagbar_width=35
 
-" -------------------------------------------
-"                    Emmet
-" -------------------------------------------
+" -------------------------------------------------------------------------------------------------
+"   Emmet
+" -------------------------------------------------------------------------------------------------
 
 let g:user_emmet_leader_key='<C-e>'
 let g:user_emmet_settings = {
@@ -239,9 +237,9 @@ let g:user_emmet_settings = {
 \}
 
 
-" -------------------------------------------
-"                  Devicons
-" -------------------------------------------
+" -------------------------------------------------------------------------------------------------
+"   Devicons
+" -------------------------------------------------------------------------------------------------
 
 let g:webdevicons_enable = 1
 let g:webdevicons_enable_nerdtree = 1
@@ -249,9 +247,9 @@ let g:webdevicons_enable_nerdtree = 1
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {} " needed
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['sol'] = ''
 
-" -------------------------------------------
-"                  Limelight
-" -------------------------------------------
+" -------------------------------------------------------------------------------------------------
+"   Limelight
+" -------------------------------------------------------------------------------------------------
 
 let g:limelight_state = 0
 function! ToggleLimelight()
