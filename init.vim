@@ -22,7 +22,7 @@ set updatetime=750         " reduce updatetime
 set cmdheight=1            " Command line height
 set foldenable             " Enables folding of code regions
 set foldmethod=manual      " Sets the fold method to manual, which means folds are created manually
-set signcolumn=yes         " Sign column on the numbers
+set signcolumn=number      " Sign column on the numbers
 filetype plugin indent on
 filetype plugin on
 
@@ -32,8 +32,9 @@ filetype plugin on
 
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
-" Close NERDTree last window (https://stackoverflow.com/questions/2066590)
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" Close NERDTree last window (https://stackoverflow.com/questions/2066590). Edited to also close with quickfix
+autocmd bufenter * if (winnr("$") == 1 && (exists('t:NERDTreeBufName') && bufwinnr(t:NERDTreeBufName) != -1 || &buftype == 'quickfix')) | q | endif
+
 
 " ──────────────────────────────────────── Key Mappings ───────────────────────────────────────────
 
@@ -186,7 +187,7 @@ let g:neoformat_enabled_solidity = ['prettier']
 let g:neoformat_try_node_exe = 1
 
 " for Debugging
-" let g:neoformat_verbose = 1
+"let g:neoformat_verbose = 1
 
 " -------------------------------------------------------------------------------------------------
 "   Tagbar
